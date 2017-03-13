@@ -3,7 +3,7 @@ all: build
 build:
 	hugo
 
-deploy:
+deploy: build
 	cd public
 	git add -A
 	git commit -m 'deploy'
