@@ -1,4 +1,4 @@
-baseURL: "http://atom-haskell.github.io/"
+baseURL: "https://atom-haskell.github.io/"
 languageCode: "en-us"
 title: "Atom-Haskell"
 theme: "hugo-theme-learn"
