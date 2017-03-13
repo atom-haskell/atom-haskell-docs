@@ -1,6 +1,7 @@
 all: build
 
 build:
+	node_modules/.bin/lunr-hugo -i "content/**/*.md" -o static/json/search.json -l yaml
 	rm -rf public/*
 	hugo
 

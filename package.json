@@ -1,0 +1,8 @@
+{
+  "name": "atom-haskell-docs",
+  "version": "0.0.0",
+  "description": "This is Atom-Haskell documentation project.",
+  "dependencies": {
+    "lunr-hugo": "^0.1.2"
+  }
+}
