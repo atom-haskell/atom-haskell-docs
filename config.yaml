@@ -9,5 +9,6 @@ params:
   description: "Programming in Haskell using Atom editor"
   menu:
     - overview
+    - installation
     - core-packages
     - extra-packages

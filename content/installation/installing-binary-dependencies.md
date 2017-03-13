@@ -2,18 +2,16 @@
 date: 2017-03-13T00:05:13+03:00
 # next: /next/path
 # prev: /prev/path
-title: Installation
+title: Installing binary dependencies
 toc: true
-weight: 15
+weight: 5
 ---
-
-## Installing binary dependencies
 
 {{%notice info%}}
 Supported `ghc-mod` versions are 5.6. and up.
 {{%/notice%}}
 
-### With `stack`
+## With `stack`
 
 The most reliable way to build these executable binaries is to use
 `stack install`.
@@ -59,7 +57,7 @@ if your `STACK_INSTALL_PATH` were `/home/johndoe/.local/bin/` then the
 absolute path to the executable would be
 `/home/johndoe/.local/bin/executable`.
 
-### With `cabal`
+## With `cabal`
 
 {{%notice info%}}
 You do not need to do this if you already installed with stack.
