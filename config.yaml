@@ -1,5 +1,13 @@
-baseURL: "http://example.org/"
+baseURL: "http://atom-haskell.github.io/"
 languageCode: "en-us"
-title: "My New Hugo Site"
+title: "Atom-Haskell"
 theme: "hugo-theme-learn"
 metaDataFormat: "yaml"
+params:
+  editURL: 'https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/'
+  # Author of the site, will be used in meta information
+  description: "Programming in Haskell using Atom editor"
+  menu:
+    - overview
+    - core-packages
+    - extra-packages
