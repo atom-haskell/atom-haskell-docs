@@ -1,7 +1,5 @@
 ---
 date: 2017-03-12T23:57:42+03:00
-next: /next/path
-prev: /prev/path
 title: Atom-Haskell documentation
 toc: true
 weight: 5
