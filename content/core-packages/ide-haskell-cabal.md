@@ -27,7 +27,10 @@ You can edit Atom keybindings by opening **Edit → Keymap...**. Here is a templ
 ```cson
 'atom-workspace':
   '': 'ide-haskell-cabal:build'
-  '': 'ide-haskell-cabal:set-build-target'
   '': 'ide-haskell-cabal:clean'
   '': 'ide-haskell-cabal:test'
+  '': 'ide-haskell-cabal:bench'
+  '': 'ide-haskell-cabal:build-dependencies'
+  '': 'ide-haskell-cabal:set-build-target'
+  '': 'ide-haskell-cabal:set-active-builder'
 ```
