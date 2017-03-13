@@ -5,11 +5,5 @@ build:
 	hugo
 
 deploy: build
-	cd public
-	git add --all
-	git commit -m 'deploy'
-	git push origin master
-	cd ..
-	git add public
-	git commit -m 'deploy'
-	git push origin master
+	cd public ; git add --all; git commit -m 'deploy' ; git push origin master
+	git add public ; git commit -m 'deploy' ; git push origin master
