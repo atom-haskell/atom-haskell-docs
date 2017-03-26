@@ -2,7 +2,7 @@
 date: 2017-03-13T00:04:29+03:00
 icon: <b>III. </b>
 title: Core Packages
-weight: 15
+weight: 10
 ---
 
 ### Chapter II
