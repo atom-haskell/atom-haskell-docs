@@ -1,5 +1,7 @@
 # atom-haskell-docs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/atom-haskell/atom-haskell-docs.svg)](https://greenkeeper.io/)
+
 This is Atom-Haskell documentation project.
 
 It uses [HUGO](https://gohugo.io/) static site generator in conjuction with GitHub pages.
