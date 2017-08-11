@@ -32,7 +32,7 @@ instructions here:
 
 ## Binary dependencies
 
-* [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell) or [`hindent`](https://github.com/commercialhaskell/hindent) -- prettify/format your source code. Used by `ide-haskell`
+* [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell), [`hindent`](https://github.com/commercialhaskell/hindent) or [`brittany`](https://github.com/lspitzner/brittany) -- prettify/format your source code. Used by `ide-haskell`
 * [`ghc-mod`](https://github.com/DanielG/ghc-mod) -- backend that does heavy lifting. Used by `haskell-ghc-mod`
 * [`hasktags`](https://github.com/MarcWeber/hasktags) -- indexes your sources for easy navigation. Used by `ide-haskell-hasktags` (Optional)
 * [`pointfree`](https://hackage.haskell.org/package/pointfree) and [`pointful`](https://hackage.haskell.org/package/pointful) -- convert source to pointfree or pointful representation. Used by `haskell-pointfree`

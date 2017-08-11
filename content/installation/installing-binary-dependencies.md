@@ -9,6 +9,15 @@ weight: 5
 Supported `ghc-mod` versions are 5.6. and up.
 {{%/notice%}}
 
+{{%notice note%}}
+These instructions assume you want to use `stylish-haskell` as a prettifier.
+If you would like to use `hindent` or `brittany` instead, substitute that
+in place of `stylish-haskell` below.
+
+Bear in mind that prettifier has to be able to work as a unix filter, i.e.
+accept input on STDIN and return output on STDOUT.
+{{%/notice%}}
+
 ## With `stack`
 
 The most reliable way to build these executable binaries is to use

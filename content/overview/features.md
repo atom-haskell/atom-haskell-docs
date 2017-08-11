@@ -83,9 +83,9 @@ Hole autocompletion:
 
 #### Code beautify
 
-You can use `stylish-haskell` utility to indent pragmas, imports and data type
-definitions. Simply select `Prettify` from Haskel IDE menu to apply
-`stylish-haskell` to current file.
+You can use prettifier filter programs, such as `stylish-haskell`,
+`hindent` and `brittany`. Simply select `Prettify` from Haskel IDE menu to apply
+prettifier to current file, or choose to prettify on each save.
 
 ![prettify](https://cloud.githubusercontent.com/assets/7275622/9705081/52d97cf0-54c1-11e5-94f0-96f09e43ada3.gif)
 
