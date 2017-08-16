@@ -16,7 +16,7 @@ Package supports using either local Hoogle database, or remote one (hosted on <h
 
 By default, package uses "new" remote database from <http://hoogle.haskell.org/>. You can change that using **Hoogle Type** setting:
 
-![](images/cc4e58def2da47ddb6c97001202528f6.png)
+![](/images/cc4e58def2da47ddb6c97001202528f6.png)
 
 ## Setup for local database
 
