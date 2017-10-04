@@ -7,11 +7,7 @@ toc: true
 weight: 10
 ---
 
-The Atom-Haskell packages assume that you have a minimal Haskell toolchain
-installed on your system. You can install this toolchain by following the
-instructions here:
-
-* [Minimal Haskell installers](https://www.haskell.org/downloads#minimal)
+The Atom-Haskell packages assume that you have at least a minimal Haskell toolchain installed on your system. See <https://www.haskell.org/downloads> for your options.
 
 ## Core Atom-Haskell packages
 
