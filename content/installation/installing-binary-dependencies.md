@@ -18,13 +18,24 @@ Bear in mind that prettifier has to be able to work as a unix filter, i.e.
 accept input on STDIN and return output on STDOUT.
 {{%/notice%}}
 
+{{%notice warning%}}
+The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system. See <https://www.haskell.org/downloads> for your options.
+{{%/notice%}}
+
+{{%notice info%}}
+This guide only touches on installing prettifier (like `stylish-haskell`) and `ghc-mod` (which you need for all the "good stuff", like type tooltips and autocompletion). Extra packages, however, can have other binary dependencies. Installation procedure is rather similar, so no detailed guide is provided. Refer to [requirements list](/overview/requirements#binary-dependencies) for more information.
+{{%/notice%}}
+
 ## With `stack`
 
-The most reliable way to build these executable binaries is to use
-`stack install`.
+{{%notice warning%}}
+See also [section on using haskell-ghc-mod with stack](/core-packages/haskell-ghc-mod#using-with-stack)
+{{%/notice%}}
 
-Run the following commands from a command line terminal after you finish
-installing the minimal Haskell toolchain:
+Probably a simpler way to start with is to build binary dependencies with
+`stack`. Refer to [stack documentation](https://docs.haskellstack.org/) to get more information about it.
+
+Run the following commands from a command line terminal after you get yourself a minimal Haskell toolchain (either via Haskell Platform, or with `stack setup`):
 
 ```bash
 $ stack install stylish-haskell
@@ -63,6 +74,10 @@ If this happens, you will need to modify relevant package's settings to point to
 if your `STACK_INSTALL_PATH` were `/home/johndoe/.local/bin/` then the
 absolute path to the executable would be
 `/home/johndoe/.local/bin/executable`.
+
+{{%notice warning%}}
+A notable exception is `haskell-ghc-mod` package. Avoid setting 'Ghc Mod Path' to anything but `ghc-mod` (i.e. plain executable name) if at all possible. Instead, add the *directory* containing `ghc-mod` executable to 'Additional Path Directories', so, using the example above, add `/home/johndoe/.local/bin` to 'Additional Path Directories'.
+{{%/notice%}}
 
 ## With `cabal`
 
@@ -110,12 +125,20 @@ Now you can install ghc-mod and stylish-haskell. *In the same directory* run
 cabal install ghc-mod stylish-haskell
 ```
 
-Now you have ghc-mod and stylish-haskell installed. Binary files are in `$HOME/ghc-mod-sandbox/bin`. You can add this path to `PATH`, or put full path to **executables** in relevant `ide-haskell` and `haskell-ghc-mod` settings.
+Now you have ghc-mod and stylish-haskell installed. Binary files are in `$HOME/ghc-mod-sandbox/bin`. You can add this path to `PATH`, or put full path to **executables** in relevant `ide-haskell` settings and full path to **directory** in `haskell-ghc-mod` 'Additional Path Directories'.
 
 For example, assuming your `HOME` is `/home/user`:
 
 * In ide-haskell settings, set 'Stylish Haskell Path' to `/home/user/ghc-mod-sandbox/bin/stylish-haskell`
-* In haskell-ghc-mod settings, set 'Ghc Mod Path' to `/home/user/ghc-mod-sandbox/bin/ghc-mod`
+* In haskell-ghc-mod settings, set 'Additional Path Directories' to `/home/user/ghc-mod-sandbox/bin`
+
+{{%notice warning%}}
+Avoid setting 'Ghc Mod Path' in `haskell-ghc-mod` settings to anything but `ghc-mod` (i.e. plain executable name) if at all possible. Instead, use 'Additional Path Directories'.
+{{%/notice%}}
+
+{{%notice tip%}}
+'Cabal Sandbox' option will make `haskell-ghc-mod` look for `ghc-mod` executable in the current project's Cabal sandbox first, so *if* using Cabal sandboxes, you can install ghc-mod per-project.
+{{%/notice%}}
 
 {{%notice warning%}}
 Don't forget to replace `$HOME` with actual path to home directory! Atom doesn't expand shell variables in package settings.
