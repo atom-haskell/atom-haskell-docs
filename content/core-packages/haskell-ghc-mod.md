@@ -10,7 +10,7 @@ weight: 15
 Haskell ghc-mod opens pipe to `ghc-mod` and queries types, info, typechecks and lints current file.
 
 {{%notice warning%}}
-When using with stack, see https://github.com/atom-haskell/haskell-ghc-mod/wiki/Using-with-stack
+When using with stack, see [Using with stack](#using-with-stack)
 {{%/notice%}}
 
 ## Configuration
@@ -75,3 +75,44 @@ Example:
   "ghcModOptions": ["--with-ghc", "/path/to/custom/ghc"]
 }
 ```
+
+## Using with stack
+
+Stack support is limited. This section contains some tricks that can help to coerce ghc-mod into cooperation.
+
+{{%notice warning%}}
+DO NOT specify full path to ghc-mod/ghc-modi in haskell-ghc-mod settings. Do not add anything to 'Additional Path Directories' as well, unless you need to (i.e. know what you're doing). Make sure 'Stack Sandbox' option is *enabled* (this is the default)
+{{%/notice%}}
+
+### Remove `dist` folder in project root
+
+Ghc-mod assumes you want to use cabal if it finds `dist/setup-config` in project root. In any case, if you want to use stack, you don't need `dist` directory anyway (unless you're using it to store sources, in which case, it's strongly advised you don't)
+
+### Maintain a separate ghc-mod installation for each stack resolver
+
+Ghc-mod requires that it must be built with the same version of GHC that you use to build your project. In most cases this means that you need a separate ghc-mod installation for every distinct stack resolver you're using.
+
+Simplest way to achieve this would be to install ghc-mod locally for every stack project you want to use it with, i.e. run `stack build ghc-mod` in project directory (if you have multiple `stack.yaml` configs, do this for each one). If this fails for some reason, try to use stack-installed ghc (with `stack --no-system-ghc --install-ghc build ghc-mod`). Note that some resolvers seemingly can't build ghc-mod at all. You might also want to install newer ghc-mod version than a given resolver offers. Refer to stack documentation on how exactly you could do that.
+
+If you enable 'Stack Sandbox' in haskell-ghc-mod settings (enabled by default), and leave 'Ghc Mod Path' as default `ghc-mod` (i.e. no actual path), Atom should automatically pick up local stack installation.
+
+With lts-4.1 resolver (and probably later), you can also install ghc-mod into 'global project' (essentially run `stack build ghc-mod` outside any project directory). This will automatically provide ghc-mod executables to all projects using this resolver (so you don't need to install it per-project). Note this does *not* work with lts-3.22.
+
+Later stack versions (and resolvers) install packages per-resolver globally, regardless of if you run `stack build ghc-mod` in stack project directory or not. Not sure which version changed that, but stack 1.0.2 with lts-5.6 resolver does that.
+
+### Avoid mixing stack- and cabal-installed packages
+
+This should go without saying. It's always a bad idea to mix packages installed with stack and cabal-install. At least avoid mixing those in the same project, i.e. if you're using stack, use stack-installed ghc-mod. If you're using cabal-install, use cabal-installed ghc-mod. Yes, it is not exactly simple.
+
+### Run Atom with `stack exec atom` (***deprecated***)
+
+{{%notice warning%}}
+This is a last-ditch workaround, is deprecated and can lead to unexpected problems.
+
+Should not be required with haskell-ghc-mod 1.6.0 and up. Please create issue if it doesn't work
+
+This can lead to ghc-mod complaining about GHC_PACKAGE_PATH, so avoid this workaround if at all possible
+{{%/notice%}}
+
+Stack manages multiple ghc installations using environment hacking. So, in order to bring this environment into scope when using Atom, the most straightforward way is to run Atom with `stack exec atom` from project directory.
+Under Windows it will be something like: `stack exec "%USERPROFILE%\AppData\Local\atom\app-1.7.3\atom.exe"`
