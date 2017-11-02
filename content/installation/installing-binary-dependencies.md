@@ -20,6 +20,8 @@ accept input on STDIN and return output on STDOUT.
 
 {{%notice warning%}}
 The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system. See <https://www.haskell.org/downloads> for your options.
+
+Please bear in mind that ghc-mod doesn't yet support GHC 8.2. See https://github.com/DanielG/ghc-mod/pull/911. If installing GHC separately, make sure to get GHC 8.0, otherwise, you might run into problems.
 {{%/notice%}}
 
 {{%notice info%}}
