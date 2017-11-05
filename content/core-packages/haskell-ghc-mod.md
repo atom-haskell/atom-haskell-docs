@@ -23,7 +23,7 @@ You really shouldn't touch `ghcModPath` setting, unless you know *precisely* wha
 
 You may also consider adding path to directory containing ghc/ghci executable to
 `additionalPathDirectories`. The list is comma-separated.
-For example, if you have `ghc` executable installed to `/usr/local/bin`, then you could extend add `additionalPathDirectories` to be `/home/user/.cabal/bin,/usr/local/bin`.
+For example, if you have `ghc` executable installed to `/usr/local/bin`, then you could extend `additionalPathDirectories` to be `/home/user/.cabal/bin,/usr/local/bin`.
 
 ## Keybindings
 
