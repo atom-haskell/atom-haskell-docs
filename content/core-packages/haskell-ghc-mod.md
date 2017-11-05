@@ -1,7 +1,5 @@
 ---
 date: 2017-03-13T00:05:13+03:00
-# next: /next/path
-# prev: /prev/path
 title: Haskell-ghc-mod
 toc: true
 weight: 15
@@ -15,13 +13,17 @@ When using with stack, see [Using with stack](#using-with-stack)
 
 ## Configuration
 
-Only configuration option you will likely need to set is `ghcModPath`. It needs to be set to full path to `ghc-mod` executable, if it is not in your PATH. For example, if you have `ghc-mod` in `/home/user/.cabal/bin/`, you need to write `/home/user/.cabal/bin/ghc-mod` in `ghcModPath`. Note that shell expansions are *not* suported, i.e. you can't use `~` or `$HOME`.
+Only configuration option you will likely need to set is `additionalPathDirectories`. It needs to be set to full path to the *directory* containing `ghc-mod` executable, if it is not in your PATH.
+
+For example, if you have `ghc-mod` in `/home/user/.cabal/bin/`, you need to write `/home/user/.cabal/bin` in `additionalPathDirectories`. Note that shell expansions are *not* suported, i.e. you can't use `~` or `$HOME`.
+
+{{%notice warning%}}
+You really shouldn't touch `ghcModPath` setting, unless you know *precisely* what you're doing. If you specify full path there, Atom won't be able to grab ghc-mod from stack or cabal sandbox!
+{{%/notice%}}
 
 You may also consider adding path to directory containing ghc/ghci executable to
-`additionalPathDirectories` configuration option. It is a comma-separated list
-of directories that will be added to your search path when invoking ghc-mod.
-For example, if you have `ghc` installed to `/usr/local`, then you would add
-`/usr/local/bin` to `additionalPathDirectories`.
+`additionalPathDirectories`. The list is comma-separated.
+For example, if you have `ghc` executable installed to `/usr/local/bin`, then you could extend add `additionalPathDirectories` to be `/home/user/.cabal/bin,/usr/local/bin`.
 
 ## Keybindings
 
