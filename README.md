@@ -1,4 +1,4 @@
-# atom-haskell-docs
+# atom-haskell-docs ![](https://david-dm.org/atom-haskell/atom-haskell-docs.svg)
 
 This is Atom-Haskell documentation project.
 
