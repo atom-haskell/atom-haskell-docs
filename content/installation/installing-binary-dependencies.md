@@ -152,17 +152,15 @@ On Linux and OSX, you can run
 in the terminal to get actual paths to all executables, if not sure what those should look like.
 {{%/notice%}}
 
-## With `NixOS`
+## With `Nix`
 
-With NixOS, haskell binaries are available in the
+On [NixOS](https://nixos.org/), or with [Nix package manager](https://nixos.org/nix/manual/), Haskell binaries are available in the
 [haskellPackages](https://nixos.org/nixpkgs/manual/#users-guide-to-the-haskell-infrastructure)
 attribute set.
 
 {{%notice info%}}
-You can query the list of all available haskell packages with:
-```bash
-nix-env -f "<nixpkgs>" -qaP -A haskellPackages
-```
+You can query the list of all available Haskell packages with:
+`nix-env -f "<nixpkgs>" -qaP -A haskellPackages`
 {{%/notice%}}
 
 Install `ghc-mod` and `stylish-haskell`.
