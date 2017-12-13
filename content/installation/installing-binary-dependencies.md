@@ -158,7 +158,7 @@ On [NixOS](https://nixos.org/), or with [Nix package manager](https://nixos.org/
 [haskellPackages](https://nixos.org/nixpkgs/manual/#users-guide-to-the-haskell-infrastructure)
 attribute set.
 
-{{%notice info%}}
+{{%notice tip%}}
 You can query the list of all available Haskell packages with:
 `nix-env -f "<nixpkgs>" -qaP -A haskellPackages`
 {{%/notice%}}
