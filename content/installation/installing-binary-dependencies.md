@@ -151,3 +151,24 @@ On Linux and OSX, you can run
 `echo $HOME/ghc-mod-sandbox/bin/*`
 in the terminal to get actual paths to all executables, if not sure what those should look like.
 {{%/notice%}}
+
+## With `NixOS`
+
+With NixOS, haskell binaries are available in the
+[haskellPackages](https://nixos.org/nixpkgs/manual/#users-guide-to-the-haskell-infrastructure)
+attribute set.
+
+{{%notice info%}}
+You can query the list of all available haskell packages with:
+```bash
+nix-env -f "<nixpkgs>" -qaP -A haskellPackages
+```
+{{%/notice%}}
+
+Install `ghc-mod` and `stylish-haskell`.
+
+```bash
+nix-env -f "<nixpkgs>" -iA haskellPackages.ghc-mod haskellPackages.stylish-haskell
+```
+
+You should now have `ghc-mod` and `stylish-haskell` available in your profile.
