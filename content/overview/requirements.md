@@ -1,9 +1,5 @@
 ---
-date: 2017-03-13T00:05:13+03:00
-# next: /next/path
-# prev: /prev/path
 title: Requirements
-toc: true
 weight: 10
 ---
 

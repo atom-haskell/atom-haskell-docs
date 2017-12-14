@@ -1,15 +1,13 @@
 ---
-date: 2017-03-12T23:57:42+03:00
 title: Atom-Haskell documentation
-toc: true
 weight: 5
 ---
+
+# Atom-Haskell documentation
 
 Welcome to Atom-Haskell documentation site.
 
 Information collected on these pages should help you get started with Haskell in Atom editor.
-
-At the moment, this site mostly only collects information from various Atom-Haskell project READMEs. Proper documentation/tutorials are work-in-progress.
 
 Click one of the links on the left to start reading.
 

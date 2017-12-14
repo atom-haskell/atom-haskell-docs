@@ -3,9 +3,10 @@ languageCode: "en-us"
 title: "Atom-Haskell"
 theme: "hugo-theme-learn"
 metaDataFormat: "yaml"
+outputs:
+  home: ["HTML", "RSS", "JSON"]
 params:
-  search: true
   editURL: 'https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/'
   # Author of the site, will be used in meta information
   description: "Programming in Haskell using Atom editor"
-  autoNav: true
+  disableLanguageSwitchingButton: true

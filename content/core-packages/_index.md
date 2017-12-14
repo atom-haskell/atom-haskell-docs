@@ -1,12 +1,11 @@
 ---
-date: 2017-03-13T00:04:29+03:00
-icon: <b>III. </b>
 title: Core Packages
 weight: 10
+chapter: true
 ---
 
 ### Chapter II
 
-# Packages
+# Core Packages
 
-A detailed overview of Atom-Haskell packages.
+{{% children depth="3" showhidden="true" %}}

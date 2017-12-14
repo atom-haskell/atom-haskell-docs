@@ -1,10 +1,11 @@
 ---
-date: 2017-03-13T06:17:48+03:00
-icon: <b>II. </b>
 title: Installation
+chapter: true
 weight: 5
 ---
 
 ### Chapter II
 
 # Installation
+
+{{% children depth="3" showhidden="true" %}}
