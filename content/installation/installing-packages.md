@@ -1,7 +1,5 @@
 ---
-date: 2017-03-13T00:05:13+03:00
 title: Installing packages
-toc: true
 weight: 1
 ---
 

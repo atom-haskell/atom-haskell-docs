@@ -1,7 +1,5 @@
 ---
-date: 2017-03-13T00:05:13+03:00
 title: Haskell-ghc-mod
-toc: true
 weight: 15
 ---
 

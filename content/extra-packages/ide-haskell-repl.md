@@ -1,7 +1,5 @@
 ---
-date: 2017-03-28T03:06:41Z
 title: IDE-Haskell-REPL
-toc: true
 weight: 5
 ---
 

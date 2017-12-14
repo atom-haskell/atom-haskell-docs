@@ -1,7 +1,5 @@
 ---
-date: 2017-03-13T03:03:47+03:00
 title: IDE-Haskell-Hoogle
-toc: true
 weight: 5
 ---
 
