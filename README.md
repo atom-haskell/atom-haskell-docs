@@ -2,9 +2,30 @@
 
 This is Atom-Haskell documentation project.
 
-It uses [HUGO](https://gohugo.io/) static site generator in conjuction with GitHub pages.
+It uses [HUGO](https://gohugo.io/) static site generator in conjunction with GitHub pages.
 
 Pull requests are welcome!
+
+## Building the site
+
+Clone this repo.
+
+```
+git clone https://github.com/atom-haskell/atom-haskell-docs
+cd atom-haskell-docs
+```
+
+Update theme submodule:
+
+```
+git submodule update --init -- themes
+```
+
+Get [HUGO](https://gohugo.io/) (>=v0.25; v0.31.1 is known to work)
+
+Run `hugo serve` to serve the site locally from memory.
+
+Run `hugo` to build site in `public`.
 
 ## License
 
