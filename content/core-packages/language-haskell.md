@@ -95,3 +95,20 @@ If you *don't* want `Prelude` identifiers highlighted differently, you can overr
   color: inherit;
 }
 ```
+
+#### Different highlighting for different Prelude identifiers
+
+Every Prelude identifier except operators has a scope corresponding to its name added, so you can add special highlighting to particular identifiers only.
+
+For example, if you would like to highlight `undefined` and `error` in angry bold red, you can add something like this to your stylesheet:
+
+```less
+.syntax--support.syntax--function.syntax--prelude.syntax--haskell {
+  &.syntax--undefined, &.syntax--error {
+    color: red;
+    font-weight: bold;
+  }
+}
+```
+
+All identifier scopes are case-sensitive, so, if you want to highlight, f.ex. `IO`, you would use `support.class.prelude.IO.haskell` scope.
