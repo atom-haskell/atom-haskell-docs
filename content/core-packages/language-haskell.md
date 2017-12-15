@@ -74,6 +74,7 @@ Scopes that are used:
 
 * `support.function.prelude.haskell` for functions and values
 * `support.class.prelude.haskell` for types
+* `support.operator.prelude.haskell` for infix operators (like `++`)
 * `entity.other.inherited-class.prelude.haskell` for typeclasses
 * `support.tag.prelude.haskell` for type constructors
 
