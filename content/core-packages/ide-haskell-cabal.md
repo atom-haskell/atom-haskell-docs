@@ -44,7 +44,7 @@ Default setting is `Auto: Auto`, which will automatically select which project a
 
 Each detected project directory also has target `Auto` in addition to targets defined in cabalfile. That target constrains automatic selection algorithm to selected project directory, but the target for that project is selected based on currently-active editor.
 
-Finally, detected project directory has the target `All`, which will build *all* targets for selected project.
+Finally, each detected project directory has a special target `All`, which will build *all* targets for selected project.
 
 ## Keybindings
 
