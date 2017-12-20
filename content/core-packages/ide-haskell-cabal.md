@@ -12,19 +12,33 @@ It supports easy switching between multiple versions of GHC by having a set of c
 * The sandbox file (cabal `CABAL_SANDBOX_CONFIG` environment variable)
 * The build directory (cabal `--builddir` parameter). This defaults to `dist/`.
 
-It also provides support for `ide-haskell`'s build target selection by reading and parsing the `.cabal` file and extracting the available targets (it uses a thin `ghcjs`-compiled wrapper around the `Cabal` library to read the `.cabal` file).
+It also provides support for build target selection by reading and parsing the cabalfile and extracting the available targets (it uses a thin `ghcjs`-compiled wrapper around the `Cabal` library to read the `.cabal` file).
 
 ## Switching between `cabal` and `stack`
 
 When you first try building your project (by running `ide-haskell-cabal:build` command from command palette, for example), you will be asked to specify a builder to use:
 
-![Command palette-like dialog window with text "Select builder to use with current project", input box, and three options "cabal", "stack" and "none"](/images/399a3ad33f6f603f28703824b4595ea6.png)
+![Command palette-like dialog window with text "Select builder to use with current project" and three options "cabal", "stack" and "none"](/images/399a3ad33f6f603f28703824b4595ea6.png)
 
 You can select one you'd like to use then. Atom will remember your choice. If you wish to choose another builder afterwards, you can do this by running `ide-haskell-cabal:set-active-builder` command. Alternatively, this same command is available in **Haskell IDE -> Builder -> Set Active Builder** menu item, or via a `🔨` button on ide-haskell panel:
 
-![Header part of ide-haskell panel, button with hammer and text "stack" highlighted](/images/c52fab5e72d0afff5f835cc03ec2465d.png)
+![Header part of ide-haskell panel, button with hammer icon and text "stack" highlighted](/images/c52fab5e72d0afff5f835cc03ec2465d.png)
 
 Currently-selected builder is also shown on that exact button, either as button text, or as tooltip (this is configurable from package settings).
+
+## Selecting a build target
+
+You can also select which target (of the ones defined in cabalfile) to build. You can do that by either running `ide-haskell-cabal:set-build-target` command, choosing **Haskell IDE -> Builder -> Set Build Target** menu item, or clicking the `🎯` button on ide-haskell panel:
+
+![Header part of ide-haskell panel, button with target icon and text "Auto" highlighted](/images/305c4065f8a41b3d5b61455409268114.png)
+
+If you do, you will be presented with the list of all available targets in all currently-open Atom project directories:
+
+![Command palette-like dialog window with text "Select target to build" and several options, "Auto: All", "lambda: All", "lambda: lambda", "lambda: lambda-exe", "lambda:lambda-test"](/images/d6bdac1b188eff86fdf675864fdfff4d.png)
+
+Default setting is `Auto: All`, which will automatically select which project and which target to build based on currently-active editor.
+
+Each detected project directory also has target `All` in addition to targets defined in cabalfile. That target constrains automatic selection algorithm to selected project directory, but the target for that project is still selected based on currently-active editor.
 
 ## Keybindings
 
