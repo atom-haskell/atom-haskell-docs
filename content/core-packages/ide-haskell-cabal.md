@@ -34,11 +34,17 @@ You can also select which target (of the ones defined in cabalfile) to build. Yo
 
 If you do, you will be presented with the list of all available targets in all currently-open Atom project directories:
 
-![Command palette-like dialog window with text "Select target to build" and several options, "Auto: All", "lambda: All", "lambda: lambda", "lambda: lambda-exe", "lambda:lambda-test"](/images/d6bdac1b188eff86fdf675864fdfff4d.png)
+![Command palette-like dialog window with text "Select target to build" and several options, "Auto: Auto", "lambda: Auto", "lambda: All", "lambda: lambda", "lambda: lambda-exe", "lambda:lambda-test"](/images/f0a7f35533a3c5d15c4ff676f57f426f.png)
 
-Default setting is `Auto: All`, which will automatically select which project and which target to build based on currently-active editor.
+{{%notice note%}}
+Before ide-haskell-cabal v2.1.0, `Auto` targets were confusingly called `All`, and there were no actual `All` targets.
+{{%/notice%}}
 
-Each detected project directory also has target `All` in addition to targets defined in cabalfile. That target constrains automatic selection algorithm to selected project directory, but the target for that project is still selected based on currently-active editor.
+Default setting is `Auto: Auto`, which will automatically select which project and which target to build based on currently-active editor.
+
+Each detected project directory also has target `Auto` in addition to targets defined in cabalfile. That target constrains automatic selection algorithm to selected project directory, but the target for that project is selected based on currently-active editor.
+
+Finally, detected project directory has the target `All`, which will build *all* targets for selected project.
 
 ## Keybindings
 
