@@ -3,7 +3,7 @@ title: Features
 weight: 5
 ---
 
-#### Sytnax highlighting
+#### Syntax highlighting
 
 Grammars:
 
