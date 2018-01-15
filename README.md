@@ -37,6 +37,7 @@ Contributors (by number of commits):
 
 <!-- BEGIN CONTRIBUTORS LIST -->
 * Nikolay Yakimov
+* Charlie Bevis
 * Erik Sutherland
 
 <!-- END CONTRIBUTORS LIST -->
