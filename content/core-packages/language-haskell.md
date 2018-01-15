@@ -10,7 +10,7 @@ Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.
 If you don't like current auto-indentation settings, you can define your own regular expression in `config.cson` (**Edit -> Open Your Config**), or disable it altogether.
 
 {{%notice note%}}
-Atom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You'll also have to escape `\`.
+Atom is using oniguruma for regular expression, and, as such, expression has to be a string, not a javascript regexp. You'll also have to escape `\`.
 {{%/notice%}}
 
 To disable auto-indent:
@@ -55,7 +55,7 @@ negate `map` [1..10]
 
 Not all syntax themes support these scopes (almost none support `keyword.operator.infix` particularly)
 
-If you want to higlight operators and infix function applications you can add the following to your stylesheet (Edit → Stylesheet...):
+If you want to highlight operators and infix function applications you can add the following to your stylesheet (Edit → Stylesheet...):
 
 ```less
 .syntax--keyword.syntax--operator.syntax--haskell {
