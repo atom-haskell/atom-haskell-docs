@@ -60,7 +60,7 @@ On Linux, avoid setting `PATH` in `.bashrc`/`.zshrc`. These scripts are only exe
 {{% /notice %}}
 
 {{% notice warning %}}
-On OSX, Atom can fail to set `PATH` correctly regardles.
+On OSX, Atom can fail to set `PATH` correctly regardless.
 {{% /notice %}}
 
 If Atom fails to find a required executable (such as `stylish-haskell`) you will
