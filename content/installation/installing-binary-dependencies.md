@@ -20,6 +20,8 @@ accept input on STDIN and return output on STDOUT.
 The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system. See <https://www.haskell.org/downloads> for your options.
 
 Please bear in mind that ghc-mod doesn't yet support GHC 8.2. See https://github.com/DanielG/ghc-mod/pull/911. If installing GHC separately, make sure to get GHC 8.0, otherwise, you might run into problems.
+
+Note that stackage lts-10.x uses GHC 8.2. If you want to use stack with ghc-mod, stick to lts-9 for now.
 {{%/notice%}}
 
 {{%notice info%}}
@@ -32,6 +34,10 @@ This guide only touches on installing prettifier (like `stylish-haskell`) and `g
 See also [section on using haskell-ghc-mod with stack](/core-packages/haskell-ghc-mod#using-with-stack)
 {{%/notice%}}
 
+{{%notice warning%}}
+Latest stack lts resolver (which is used by default) uses GHC 8.2, which ghc-mod isn't compatible with as of yet. Please stick to lts-9 for now if you want to use ghc-mod.
+{{%/notice%}}
+
 Probably a simpler way to start with is to build binary dependencies with
 `stack`. Refer to [stack documentation](https://docs.haskellstack.org/) to get more information about it.
 
@@ -42,12 +48,23 @@ $ stack install stylish-haskell
 ...
 Copied executables to {STACK_INSTALL_PATH}:
 - stylish-haskell
-$ stack install ghc-mod
+$ stack --resolver lts-9 install ghc-mod
 ...
 Copied executables to {STACK_INSTALL_PATH}:
 - ghc-mod
 - ghc-modi
 ```
+
+{{%notice info%}}
+Note the `--resolver lts-9` part in `ghc-mod` example -- this ensures that
+stack uses GHC 8.0 to build ghc-mod. Since ghc-mod will only work for the GHC
+version it was built with, you might also want to tell stack to use `lts-9.x`
+resolver. You can do that by running `stack config set resolver lts-9` either
+in a project (which will change the project's `stack.yaml`) or outside of any
+project, which will modify settings in stack's global config. See [stack
+documentation](https://docs.haskellstack.org/en/stable/yaml_configuration) for
+more information.
+{{%/notice%}}
 
 ... where `STACK_INSTALL_PATH` depends on your operating system.  For example,
 on OS X or Linux this path will usually be `~/.local/bin/`.

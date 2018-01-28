@@ -78,6 +78,10 @@ Example:
 
 ## Using with stack
 
+{{%notice warning%}}
+Latest stack lts resolver (which is used by default) uses GHC 8.2, which ghc-mod isn't compatible with as of yet. Please stick to lts-9 for now if you want to use ghc-mod.
+{{%/notice%}}
+
 Stack support is limited. This section contains some tricks that can help to coerce ghc-mod into cooperation.
 
 {{%notice warning%}}
