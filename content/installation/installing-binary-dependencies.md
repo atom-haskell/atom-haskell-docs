@@ -19,9 +19,17 @@ accept input on STDIN and return output on STDOUT.
 {{%notice warning%}}
 The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system. See <https://www.haskell.org/downloads> for your options.
 
-Please bear in mind that ghc-mod doesn't yet support GHC 8.2. See https://github.com/DanielG/ghc-mod/pull/911. If installing GHC separately, make sure to get GHC 8.0, otherwise, you might run into problems.
+Please bear in mind that official release ghc-mod v5.8.0.0 doesn't support GHC 8.2. If installing GHC separately, make sure to get GHC 8.0, otherwise, you might run into problems.
 
-Note that stackage lts-10.x uses GHC 8.2. If you want to use stack with ghc-mod, stick to lts-9 for now.
+Note that stackage lts-10.x uses GHC 8.2. If you want to use stack with official release of ghc-mod, stick to lts-9 for now.
+
+If feeling adventurous, you can try building
+an unstable ghc-mod for your chosen GHC version.
+* [`master` branch](https://github.com/DanielG/ghc-mod) should work with GHC 8.2
+* [`lierdakil/ghc-8.4.3` branch](https://github.com/DanielG/ghc-mod/pull/942) seems to work with GHC 8.4.3 (in particular, stack LTS-12)
+
+Alternatively, you can use ide-haskell-repl to employ plain old GHCi as a backend provider. This is a rather limited option compared to ghc-mod, but it might work better for newer GHC versions. Refer to [ide-haskell-repl page](/extra-packages/ide-haskell-repl#using-ide-haskell-repl-as-ide-backend) for more information.
+
 {{%/notice%}}
 
 {{%notice info%}}

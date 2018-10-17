@@ -11,6 +11,19 @@ ide-haskell-repl will try to automatically select the correct repl backend (`sta
 
 If `ide-haskell-cabal` is unavailable (e.g. disabled), ide-haskell-repl will fall back to `defaultRepl` specified in settings.
 
+## Using ide-haskell-repl as IDE backend
+
+ide-haskell-repl can be used to employ GHCi as an IDE backend (in place of ghc-mod etc). At the
+moment of writing, this mode is somewhat limited, but it does provide
+types on mouse hover and checking for errors/warnings on save.
+
+To enable, go to ide-haskell-repl settings, and enable "Show Types" and "Check on Save" options:
+!["Show Types" and "Check on Save" checkmarks are enabled](/images/537aff42dc9252e648ec924c15fafdc3.png)
+
+Make sure ide-haskell-repl is the only active backend (that is, disable haskell-ghc-mod package if it's installed)
+
+Bear in mind that GHCi can be, at times, a memory hog.
+
 ## Using on Windows
 
 On Windows, interrupting ghci will kill it. There is no good solution to this problem at the moment, but there is a "bad" solution.
