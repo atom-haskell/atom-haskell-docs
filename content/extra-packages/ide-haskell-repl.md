@@ -5,6 +5,18 @@ weight: 5
 
 This package provides a way to interact with `ghci` (or, alternatively, `cabal repl` or `stack ghci`) from Atom.
 
+Repl is opened in the context of the current Atom editor, so there is no need to load the file (even though `:l filename` will work). 
+
+Type any ghci command in the bar at the bottom of the window and press `shift+enter` (on Win and Linux) or `cmd+enter` (on macOS) to execute it.
+
+Take a look at https://github.com/atom-haskell/ide-haskell-repl/blob/master/keymaps/ide-haskell-repl.cson for other default bindings.
+
+Four buttons alongside the command bar allow for further actions:
+- reload file and repeat last command
+- automatic reload file and repeat last command on file save (toggle)
+- interrupt current computation
+- clear window
+
 ## Repl backend selection
 
 ide-haskell-repl will try to automatically select the correct repl backend (`stack`/`cabal`/`ghci`) based on current builder chosen in `ide-haskell-cabal`. You can choose `none` builder to use `ghci` in plain projects (a.k.a. projects with no `*.cabal` file).
