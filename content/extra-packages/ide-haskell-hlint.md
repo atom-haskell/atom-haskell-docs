@@ -9,7 +9,7 @@ The package requires IDE-Haskell, which provides GUI and other niceties. It also
 
 ## Installing HLint
 
-Installation follows the standard pattern of any Haskell library or program: run `cabal update` to update your local Hackage database, then `cabal v2-install hlint` to install HLint.
+Installation follows the standard pattern of any Haskell library or program: run `cabal v2-update` to update your local Hackage database, then `cabal v2-install hlint` to install HLint.
 
 You can of course also install HLint using your favorite package manager (brew, nix, etc). This does _not_ have the same strict requirements as ghc-mod.
 
