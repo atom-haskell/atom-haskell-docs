@@ -45,13 +45,17 @@ Bear in mind that GHCi can be, at times, a memory hog.
 
 On Windows, interrupting ghci will kill it. There is no good solution to this problem at the moment, but there is a "bad" solution.
 
-You need to get `ghci-wrapper.exe` executable from https://github.com/atom-haskell/win-ghci-wrapper/releases (or if you don't trust random binaries you've downloaded from the Internet, you can build it from source -- you only really need ghc for that)
+Open the command palette (ctrl/cmd+shift+P) and run `ide-haskell-repl:setup-ghci-wrapper` command. This will download `ghci-wrapper.exe`, place it into Atom's user directory, and change ide-haskell-repl configuration to use it.
+
+If you prefer to have more control, you can do the same manually. Get the `ghci-wrapper.exe` executable from https://github.com/atom-haskell/win-ghci-wrapper/releases (or if you don't trust random binaries you've downloaded from the Internet, you can build it from source -- you only really need ghc for that)
 
 Then you need to specify full path to this executable in `ghciWrapperPath` setting of this package.
 
 For example, if you placed `ghci-wrapper.exe` in `C:\Downloads` directory, you need to put `C:\Downloads\ghci-wrapper.exe` in `ghciWrapperPath` setting.
 
 Finally, restart any open REPL sessions.
+
+Note that at the time of writing, `cabal v2-repl` (cabal-install v3.0.0.0) will still die when interrupted. There is no workaround at the moment.
 
 ## Repl-specific commands
 
