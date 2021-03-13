@@ -80,12 +80,12 @@ Hole autocompletion:
 #### Code beautify
 
 You can use prettifier filter programs, such as `stylish-haskell`,
-`hindent` and `brittany`. Simply select `Prettify` from Haskel IDE menu to apply
+`brittany`, `ormolu`. Simply select `Prettify` from Haskel IDE menu to apply
 prettifier to current file, or choose to prettify on each save.
 
 ![prettify](https://cloud.githubusercontent.com/assets/7275622/9705081/52d97cf0-54c1-11e5-94f0-96f09e43ada3.gif)
 
 #### Build and test project
 
-If you have `ide-haskell-cabal` or similar package installed, you can build,
-clean and test your project from ide-haskell (stack and cabal supported)
+If you have `ide-haskell-cabal`, you can build, clean and test your project
+from ide-haskell (stack and cabal supported)
